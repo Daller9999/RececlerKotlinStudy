@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">RecyclerStudy</string>
+
+    <string-array name="list_strings">
+        <item>A Chair in A Room: Greenwater</item>
+        <item>Accounting/Accounting+</item>
+        <item>The American Dream</item>
+        <item>Apex Construct</item>
+        <item>Archangel: Hellfire</item>
+        <item>Arizona Sunshine</item>
+        <item>Astraeus</item>
+        <item>Augmented Empire</item>
+        <item>Batman: Arkham</item>
+        <item>Beat Saber</item>
+    </string-array>
+
+    <string-array name="pictures_array">
+        <item>https://yandex.ru/images/search?pos=0&from=tabbar&img_url=https%3A%2F%2Fvr-game.ru%2Fuploads%2Fposts%2F2020-03%2F1583317859_65.jpg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+        <item>https://yandex.ru/images/search?pos=1&from=tabbar&img_url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FjERZpoHSgBA%2Fmaxresdefault.jpg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+        <item>https://yandex.ru/images/search?pos=2&from=tabbar&img_url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FVeiGlgBZDFo%2Fmaxresdefault.jpg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+        <item>https://yandex.ru/images/search?pos=3&from=tabbar&img_url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*JP0cknLkEil1pRc3l4lSCQ.jpeg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+        <item>https://yandex.ru/images/search?pos=4&from=tabbar&img_url=https%3A%2F%2Fviroom.com.ua%2Fwp-content%2Fuploads%2F2019%2F11%2F66-vr-viroom.jpg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+        <item>https://yandex.ru/images/search?pos=5&from=tabbar&img_url=https%3A%2F%2Fviroom.com.ua%2Fwp-content%2Fuploads%2F2019%2F11%2F28-vr-viroom.jpg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+        <item>https://yandex.ru/images/search?pos=6&from=tabbar&img_url=https%3A%2F%2F4dim.ru%2Fwp-content%2Fuploads%2Fpogruzites-v-luchshie-vr-igry-dlya-android_5da84ca791725.jpeg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+        <item>https://yandex.ru/images/search?pos=7&from=tabbar&img_url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEziUTzDBLFA%2Fmaxresdefault.jpg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+        <item>https://yandex.ru/images/search?pos=8&from=tabbar&img_url=https%3A%2F%2Fcubiq.ru%2Fwp-content%2Fuploads%2F2020%2F07%2F1-23-scaled.jpg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+        <item>https://yandex.ru/images/search?pos=9&from=tabbar&img_url=https%3A%2F%2Fgreatgamer.ru%2Fimages%2Fnews%2F08.2019%2F26%2Fnews_9895.jpg&text=%D1%82%D0%BE%D0%BF+vr+%D0%B8%D0%B3%D1%80&rpt=simage</item>
+    </string-array>
+</resources>
