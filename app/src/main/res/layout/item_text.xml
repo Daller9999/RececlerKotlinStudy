@@ -6,7 +6,8 @@
     <TextView
         app:layout_constraintTop_toTopOf="parent"
 
-        android:textSize="15sp"
+        android:padding="10dp"
+        android:textSize="20sp"
         android:gravity="center"
         android:id="@+id/textViewData"
         android:layout_width="match_parent"

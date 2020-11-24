@@ -3,6 +3,7 @@ package com.sunplacestudio.recyclerstudy
 import android.graphics.drawable.Drawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -16,8 +17,11 @@ import com.sunplacestudio.recyclerstudy.Items.ItemData
 import com.sunplacestudio.recyclerstudy.Items.ItemImage
 import java.util.*
 import kotlin.collections.ArrayList
+import android.support.v7.widget.helper.ItemTouchHelper
+import android.view.View
 
-class MainActivity : AppCompatActivity(), RequestListener<Drawable> {
+
+class MainActivity : AppCompatActivity(), RequestListener<Drawable>, RecyclerAdapter.OnItemClick {
 
     private var arrayList: ArrayList<ItemData> = ArrayList()
     private lateinit var recyclerView: RecyclerView
@@ -31,7 +35,7 @@ class MainActivity : AppCompatActivity(), RequestListener<Drawable> {
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
 
         val button = findViewById<Button>(R.id.buttonUpdate)
-        button.setOnClickListener { randomLoad() }
+        button.setOnClickListener { randomGenerate() }
 
         val arrayListStrings = resources.getStringArray(R.array.strings_array)
         val arrayListPictures = resources.getStringArray(R.array.pictures_array)
@@ -41,6 +45,7 @@ class MainActivity : AppCompatActivity(), RequestListener<Drawable> {
 
         for (pic in arrayListPictures)
             Glide.with(applicationContext).load(pic).addListener(this).preload()
+
     }
 
     override fun onLoadFailed(
@@ -61,13 +66,22 @@ class MainActivity : AppCompatActivity(), RequestListener<Drawable> {
     ): Boolean {
         arrayList.add(ItemImage(model.toString(), resource!!))
         if (arrayList.size == 20) {
-            recyclerAdapter = RecyclerAdapter(applicationContext, arrayList)
+            recyclerAdapter = RecyclerAdapter(applicationContext, arrayList, this)
             recyclerView.adapter = recyclerAdapter
+            val callback = OnTouchDragDropListenAdapter(recyclerAdapter)
+            val touchHelper = ItemTouchHelper(callback)
+            touchHelper.attachToRecyclerView(recyclerView);
+
+            randomGenerate()
         }
         return true
     }
 
-    fun randomLoad() {
+    override fun onClick(view: View, text: String) {
+        Snackbar.make(view, text, Snackbar.LENGTH_LONG).show();
+    }
+
+    fun randomGenerate() {
         val data = ArrayList((recyclerView.adapter as RecyclerAdapter).getData())
         Collections.shuffle(arrayList)
         val itemDiffUtil = ItemDiffUtil(arrayList, data)
