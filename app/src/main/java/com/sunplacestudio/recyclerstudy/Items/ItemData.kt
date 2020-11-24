@@ -7,12 +7,27 @@ open class ItemData(itemEnum: ItemEnum, data: String) {
         PICTURE
     }
 
-    private lateinit var itemEnum: ItemEnum
-    private lateinit var data: String
+    private var itemEnum: ItemEnum
+    private var data: String
 
     init {
         this.itemEnum = itemEnum
         this.data = data
     }
+
+    fun getItemType(): ItemEnum {
+        return itemEnum
+    }
+
+    fun getText(): String {
+        return data
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (other is ItemData)
+            return data.equals(other.data) && itemEnum == other.itemEnum
+        return false
+    }
+
 
 }
