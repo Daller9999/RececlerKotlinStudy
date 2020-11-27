@@ -26,7 +26,7 @@ class WeatherService: Service() {
     private var isRun = false
     private var binder = WeatherBinder()
     private var callBack: DataCallBack? = null
-    private val scope = CoroutineScope(Dispatchers.Main)
+    private val scope = CoroutineScope(Dispatchers.IO)
     private var lastText: String = ""
 
     companion object {
